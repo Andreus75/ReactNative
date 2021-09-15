@@ -6,7 +6,6 @@ import User from "./User";
 
 
 const Users = (props) => {
-
     let {navigation} = props;
     let [users, setUsers] = useState({});
 
@@ -21,6 +20,7 @@ const Users = (props) => {
                   />
     </View>
 };
+
 export default Users;
 
 let styles = StyleSheet.create({});

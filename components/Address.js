@@ -14,6 +14,7 @@ const Address = ({address}) => {
         <Text><Geo geo={geo}/></Text>
     </View>
 };
+
 export default Address;
 
 let styles = StyleSheet.create({});
