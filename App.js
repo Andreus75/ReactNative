@@ -1,21 +1,20 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import Users from "./components/Users";
 import {NavigationContainer} from "@react-navigation/native";
 import Home from "./components/Home";
-import {createStackNavigator} from "@react-navigation/stack";
-import UserDetail from "./screens/UserDetails";
+import {createBottomTabNavigator} from "@react-navigation/bottom-tabs";
+import UsersPageNavigator from "./screens/UsersPageNavigator";
 
-let StackNavigator = createStackNavigator();
+let BottomTabNavigator = createBottomTabNavigator();
+
 export default function App() {
   return (
       <NavigationContainer>
-          <StackNavigator.Navigator>
-              <StackNavigator.Screen name={'Users'} component={Users}/>
-              <StackNavigator.Screen name={'Home'} component={Home}/>
-              <StackNavigator.Screen name={'UserDetail'} component={UserDetail}/>
-          </StackNavigator.Navigator>
+          <BottomTabNavigator.Navigator tabBarOption={{tabStyle: {justifyContent: "center", alignItems: "center"}}}>
+              <BottomTabNavigator.Screen name={'home'} component={Home}/>
+              <BottomTabNavigator.Screen name={'usersPageNavigator'} component={UsersPageNavigator}/>
+          </BottomTabNavigator.Navigator>
       </NavigationContainer>
   );
 }

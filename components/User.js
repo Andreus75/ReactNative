@@ -6,12 +6,12 @@ const User = (props) => {
 
     let {item, nav: {navigate}} = props;
     let onPress = () => {
-        navigate('UserDetail', {data: item});
+        navigate('userDetails', {data: item});
     }
 
     return <View style={[styles.userBox, styles.margins]}>
         <Text style={[styles.userBox]}>{item.name}</Text>
-        <Button title={'user details'} onPress={onPress}/>
+        <Button title={'UserDetails'} onPress={onPress}/>
     </View>
 };
 export default User;
